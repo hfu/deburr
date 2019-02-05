@@ -20,6 +20,7 @@
   "dependencies": {
     "better-queue": "^3.8.10",
     "better-sqlite3": "^5.4.0",
+    "cli-spinner": "^0.2.8",
     "config": "^3.0.1",
     "hjson": "^3.1.2",
     "prettysize": "^2.0.0",

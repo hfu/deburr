@@ -5,6 +5,7 @@ const fs = require('fs')
 const winston = require('winston')
 const path = require('path')
 const pretty = require('prettysize')
+const Spinner = require('cli-spinner').Spinner
 
 // global settings
 winston.add(new winston.transports.Console({
@@ -56,10 +57,13 @@ const queue = new Queue((mbtilesPath, cb) => {
   const db = new Database(mbtilesPath, {})
   zxy = path.basename(mbtilesPath, '.mbtiles')
     .split('-').map(v => Number(v))
+  const spinner = new Spinner()
+  spinner.start()
   deburr(db, zxy)
   db.exec('VACUUM;')
   db.close()
   winston.info(` -> ${pretty(fs.statSync(mbtilesPath).size)}`)
+  spinner.stop()
   return cb(null)
 }, { concurrent: concurrent })
 
