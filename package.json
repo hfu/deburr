@@ -1,0 +1,28 @@
+{
+  "name": "deburr",
+  "version": "1.0.0",
+  "description": "Delete unnecessary tiles from modular mbtiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfu/deburr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/hfu/deburr/issues"
+  },
+  "homepage": "https://github.com/hfu/deburr#readme",
+  "dependencies": {
+    "better-queue": "^3.8.10",
+    "better-sqlite3": "^5.4.0",
+    "config": "^3.0.1",
+    "hjson": "^3.1.2",
+    "prettysize": "^2.0.0",
+    "winston": "^3.2.1"
+  }
+}

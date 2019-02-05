@@ -1,0 +1,5 @@
+{
+  concurrent: 1
+  minzoom: 6
+  maxzoom: 15
+}
